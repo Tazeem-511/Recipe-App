@@ -1,0 +1,115 @@
+/* Navbar container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(51, 51, 51, 0.8); /* Transparent background */
+    padding: 0.5rem 1rem;
+    color: white;
+    position: fixed; /* Fixed navbar for scrolling effect */
+    width: 100%;
+    height: 4rem;
+    top: 0;
+    left: 0;
+    z-index: 100; /* Ensure navbar stays on top */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Add background and shadow on scroll */
+.navbar.scrolled {
+    background-color: rgba(51, 51, 51, 1); /* Solid background */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Menu icon */
+.menu-icon {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect on menu icon */
+.menu-icon:hover {
+    transform: scale(1.2);
+}
+
+/* Navbar links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    margin-left: auto; /* Pushes links to the right */
+    margin-right: 2rem;
+    transition: transform 0.3s ease;
+    /* background-color: red; */
+}
+
+/* Navbar link items */
+.nav-links li {
+    text-transform: uppercase;
+    
+}
+
+/* Navbar link styling */
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+    margin-left: 1.7rem;
+}
+
+/* Hover effect for navbar links */
+.nav-links a:hover {
+    color: #ff6f61; /* Highlight color */
+    transform: scale(1.1);
+    text-shadow: 0 2px 5px rgba(255, 111, 97, 0.5); /* Glow effect */
+}
+  
+  /* Responsive Styles */
+  @media (max-width: 400px) {
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #333;
+        padding: 0.5rem 1rem;
+        color: white;
+        position: relative;
+        z-index: 1000; /* Ensure navbar stays on top */
+      }
+    .menu-icon {
+      display: block;
+    }
+  
+    .nav-links {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      position: fixed;
+      top: 0;
+      right: 100%; /* Initially hidden */
+      width: 70%;
+      height: 100%;
+      background-color: #333;
+      padding: 2rem 1rem;
+      box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+      transition: right 0.3s ease-in-out; /* Slide animation */
+      overflow-y: auto; /* Prevent hiding of links */
+    }
+  
+    /* When open */
+    .nav-links.open {
+      right: -28px;
+    }
+  
+    .nav-links li {
+      margin: 0.5rem 0;
+    }
+  }
+  

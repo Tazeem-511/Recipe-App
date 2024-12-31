@@ -1,0 +1,102 @@
+/* about.css */
+
+/* General Styles */
+.about-page {
+
+    color: #f7fafc; /* Light text color */
+    padding-top: 4rem; /* Top padding */
+    padding-bottom: 4rem; /* Bottom padding */
+}
+
+.about-page .content-container {
+    max-width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-page h1 {
+    font-size: 2.5rem;
+    color: #f7fafc; /* Light text color for heading */
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.about-page p {
+    font-size: 1.125rem;
+    color: #e2e8f0; /* Slightly darker gray for text */
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.about-page .image-container {
+    margin-bottom: 2rem;
+}
+
+.about-page .team-section {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.about-page .team-section h2 {
+    font-size: 2rem;
+    color: #f7fafc; /* Light text color for section heading */
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.about-page .team-section p {
+    font-size: 1.125rem;
+    color: #e2e8f0; /* Light gray text color */
+}
+
+/* Image Styling */
+.about-page img {
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.about-page img:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-page .team-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-page h1 {
+        font-size: 2rem;
+    }
+
+    .about-page p {
+        font-size: 1rem;
+    }
+}
+
+/* Dark Mode Media Query */
+@media (prefers-color-scheme: dark) {
+    .about-page {
+        color: #f7fafc; /* Light text for dark mode */
+    }
+
+    .about-page p {
+        color: #e2e8f0; /* Light text color for paragraphs */
+    }
+
+    .about-page h1 {
+        color: #f7fafc; /* Light heading color */
+    }
+
+    .about-page .team-section h2 {
+        color: #f7fafc; /* Light section heading color */
+    }
+
+    .about-page .team-section p {
+        color: #e2e8f0; /* Light text for team description */
+    }
+}

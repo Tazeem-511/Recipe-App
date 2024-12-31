@@ -1,0 +1,85 @@
+/* contact.css */
+
+/* General Styles */
+.contact-page {
+    color: #f7fafc; /* Light text color */
+    padding-top: 4rem; /* Top padding */
+    padding-bottom: 4rem; /* Bottom padding */
+}
+
+.contact-page .content-container {
+    max-width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-page h1 {
+    font-size: 2.5rem;
+    color: #f7fafc; /* Light heading color */
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.contact-page p {
+    font-size: 1.125rem;
+    color: #e2e8f0; /* Light gray text */
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+/* Form Section */
+.contact-page .form-container {
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-page .form-container input,
+.contact-page .form-container textarea {
+    width: 100%;
+    padding: 1rem;
+    margin: 1rem 0;
+    color: #f7fafc; /* Text color for inputs */
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+}
+
+.contact-page .form-container input:focus,
+.contact-page .form-container textarea:focus {
+    outline: none;
+    border: 2px solid #ff6f61; /* Focus effect */
+}
+
+.contact-page .form-container button {
+    width: 100%;
+    padding: 1rem;
+    background-color: #ff6f61; /* Button background */
+    color: #f7fafc;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-page .form-container button:hover {
+    background-color: #e35c53; /* Button hover color */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-page h1 {
+        font-size: 2rem;
+    }
+
+    .contact-page p {
+        font-size: 1rem;
+    }
+
+    .contact-page .form-container {
+        padding: 1rem;
+    }
+}

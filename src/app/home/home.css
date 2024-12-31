@@ -1,0 +1,237 @@
+/* General Styles */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;500&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+ES+Deco+Guides&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap'); 
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+/* Hero Slider Styles */
+.hero-slider {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slider-container {
+  display: flex;
+  transition: transform 1s ease-in-out;
+}
+
+.slider-item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slider-item.active {
+  opacity: 1;
+}
+
+.slider-image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.slider-image:hover {
+  transform: scale(1.05); /* Hover effect for image */
+}
+
+.slider-content {
+  position: absolute;
+  bottom: 20%;
+  left: 27%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: white;
+  z-index: 10;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.slider-item.active .slider-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hero Slider Content Styling */
+/* Hero Slider Content Styling */
+.slider-content h1 {
+  font-size: 5rem; /* Large font size for the title */
+  font-family: "Playfair Display", serif; /* Elegant and stylish font */
+  text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5); /* Elegant shadow for depth */
+  margin: 1rem 0;
+  line-height: 1.2;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.slider-content h1:hover {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+  color: #ff6f61; /* Highlighted color on hover */
+}
+
+/* Button Styling */
+.btn-primary {
+  background-color: #ff6f61;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: white;
+  border-radius: 5px;
+  font-family: "Playfair Display", serif; /* Stylish font for button */
+  font-size: 1.2rem; /* Slightly larger font for button */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #e35c53;
+  transform: scale(1.1); /* Button hover effect */
+}
+
+
+.slider-content p {
+  font-size: 1.2rem; /* Larger font size for description */
+  font-family: 'Roboto', sans-serif; /* Clean sans-serif font */
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  max-width: 700px; /* Limit width for better readability */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 300px) {
+  .slider-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .slider-content p {
+    font-size: 0.9rem;
+  }
+
+  .btn-primary {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  .slider-content {
+    bottom: 15%;
+  }
+
+  .slider-image {
+    height: 50vh; /* Reduced height for smaller screens */
+  }
+}
+
+@media (min-width: 301px) and (max-width: 400px) {
+  .slider-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .slider-content p {
+    font-size: .7rem;
+    margin-left: -1rem;
+  }
+
+  .btn-primary {
+    padding: 9px 18px;
+    font-size: 1rem;
+  }
+
+  .slider-content {
+    top: 18%;
+    margin-left: -4.2rem;
+    /* background-color: red; */
+    width: 17rem;
+
+  }
+
+  .slider-image {
+    height: 60vh; /* Adjust height for mid-size screens */
+  }
+}
+
+
+/* Content Section */
+.content {
+  padding: 50px 20px;
+  text-align: center;
+  background: #212121; /* White background for contrast */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+  border-radius: 10px; /* Rounded corners */
+  margin: 30px auto;
+  max-width: 900px; /* Centered content with fixed width */
+  margin-bottom: 6rem;
+}
+
+.content h2 {
+  font-size: 2.5rem;
+  color: #ff6f61; /* Highlighted heading color */
+  margin-bottom: 20px;
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2); /* Heading shadow */
+}
+
+.content p {
+  font-size: 1.2rem;
+  color: #555; /* Subtle text color */
+  line-height: 1.8; /* Better readability */
+  margin-bottom: 20px;
+}
+
+.content p:last-of-type {
+  margin-bottom: 0; /* Remove extra space after the last paragraph */
+}
+
+/* Add subtle hover animation for text */
+.content h2:hover {
+  color: #e35c53; /* Slightly darker shade on hover */
+  transform: scale(1.05);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .content {
+    padding: 30px 15px;
+  }
+
+  .content h2 {
+    font-size: 2rem;
+  }
+
+  .content p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    padding: 20px 10px;
+    margin-top: -12rem;
+  }
+
+  .content h2 {
+    font-size: 1.8rem;
+  }
+
+  .content p {
+    font-size: 0.9rem;
+  }
+}
